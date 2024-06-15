@@ -1,5 +1,6 @@
 import React from 'react'
 import { Spotlight } from './ui/spotlight'
+import { TextGenerateEffect } from './ui/TextGenerateEffect'
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
       <div
-        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.05] bg-grid-black-100/[0.2]
+        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
         absolute top-0 left-0 flex items-center justify-center"
         >
         <div
@@ -25,7 +26,7 @@ const Hero = () => {
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
               Hamideh Azarmanesh
           </p>
-          {/* <TextGenerateEffect
+          <TextGenerateEffect
             words="Transforming Concepts into Seamless User Experiences"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
@@ -34,7 +35,7 @@ const Hero = () => {
             Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
           </p>
 
-          <a href="#about">
+          {/* <a href="#about">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
