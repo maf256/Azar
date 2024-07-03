@@ -1,33 +1,31 @@
-import Hero from "@/components/Hero";
-import { FloatingNav } from "@/components/ui/FloatingNAV";
-import { FaHome } from "react-icons/fa";
-import Image from "next/image";
-import Grid from "@/components/Grid";
+"use client";
 
-export default function Home() {
+import { navItems } from "@/data";
+
+import Hero from "@/components/Hero";
+import Grid from "@/components/Grid";
+import Footer from "@/components/Footer";
+import Clients from "@/components/Clients";
+import Approach from "@/components/Approach";
+import Experience from "@/components/Experience";
+import RecentProjects from "@/components/RecentProjects";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
+
+const Home = () => {
   return (
-      <main className="relative bg-black-100 flex juxtify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-        <div className="max-w-7xl w-full">
-          <FloatingNav navItems= {[
-            {name: "Home", link: "/", icon: <FaHome />}
-            ]} />
-          <Hero />
-          <Grid />
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-        </div>
-      </main>
-    );
-}
- 
+    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+      <div className="max-w-7xl w-full">
+        <FloatingNav navItems={navItems} />
+        <Hero />
+        <Grid />
+        <RecentProjects />
+        <Clients />
+        <Experience />
+        <Approach />
+        <Footer />
+      </div>
+    </main>
+  );
+};
+
+export default Home;
